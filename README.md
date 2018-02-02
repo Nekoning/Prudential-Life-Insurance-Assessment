@@ -1,37 +1,48 @@
-## Welcome to GitHub Pages
+# Prudential-Life-Insurance-Assessment
 
-You can use the [editor on GitHub](https://github.com/Nekoning/Prudential-Life-Insurance-Assessment/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Data Set
+[GitHub] https://www.kaggle.com/c/prudential-life-insurance-assessment/data
+- The dataset provides hundred variables as attributes to predict the result “response” variable for each id. “Response” has 8 levels as measure of risk
 
-### Markdown
+## Motivation
+- Due to extensive information of identifying risk classification and eligibility, the results have been bounded in life insurance application processes
+- Lack of automated approach results in degradation of public interest in the industry
+- Around 40% of US households own individual life insurance
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Step
+### Data Cleaning and preprocessing
+1. Categorizing the data
+2. Scaling the data
+3. Converting categorical values into numberic values
+4. Converting binary columns in 1_0 
+5. Imputing data
+6. Continuous data with median
+7. Discrete data with mode
 
-```markdown
-Syntax highlighted code block
+### Linear Regression
+Linear Regression is an approach for modeling the relationship between a scalar dependent variable y and one or more explanatory variables denoted X
+1. Observe Response which represents the degree of one risk from 1 to 8
+2. Feature selection: 3 attempts
+3. Build model and do prediction
+4. R packages: library(forecast) ,library(dplyr), library(randomForest),library(caret), library(ggplot2)
 
-# Header 1
-## Header 2
-### Header 3
+### Decision Tree
+A decision tree is a decision support tool that uses a tree like model of decisions and their possible consequences 
+1. Prevents overfitting
+2. Continuous variable
+3. Handles training examples with missing attributes 
+4. R packages: library(forecast) ,library(rpart), library(randomForest),library(caret), library(rpart.plot),library(RColorBrewer)
 
-- Bulleted
-- List
+### SVM
+A Support Vector Machine (SVM) is a discriminative classifier formally defined by a separating hyperplane.
+1. We tune the SVM model to find the optimum value of the gamma and cost value be used for the SVM model with the kernel
+2. After finding the optimum gamma and cost value, we implement it on the actual SVM model.
+3. R packages: library(caret), library(e1071)
 
-1. Numbered
-2. List
+## Conclusion
+I use RMSD(Root Mean Square Error) to measure the differences between values predicted by a model and the values actually observed.
+- Linear Regression: 1.994
+- Decision Tree: 1.12
+- SVM Regression: 2.23
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Nekoning/Prudential-Life-Insurance-Assessment/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
