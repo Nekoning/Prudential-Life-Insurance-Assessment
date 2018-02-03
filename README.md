@@ -12,6 +12,7 @@
 
 ## Step
 ### Data Cleaning and preprocessing
+![](image/dataCleaning.png)
 1. Categorizing the data
 2. Scaling the data
 3. Converting categorical values into numberic values
@@ -23,7 +24,13 @@
 ### Linear Regression
 Linear Regression is an approach for modeling the relationship between a scalar dependent variable y and one or more explanatory variables denoted X
 1. Observe Response which represents the degree of one risk from 1 to 8
-2. Feature selection: 3 attempts
+2. Feature selection: 3 attempts  
+  1.1. First Attempt: Random Forest  
+  ![](image/LinearRegression_RF.png)  
+  1.2. Second Attempt: RMSE score  
+  ![](image/LinearRegression_RMSE.png)  
+  1.3. Third Attempt: Cross Validation  
+  ![](image/LinearRegression_CrossValidation.png)  
 3. Build model and do prediction
 4. R packages: library(forecast) ,library(dplyr), library(randomForest),library(caret), library(ggplot2)
 
